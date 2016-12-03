@@ -1,11 +1,16 @@
-<?php 
+<head>
+<link rel="stylesheet" type="text/css" href="sitil.css">
+</head><?php 
 include "bag.php"; 
 include "function.php";
+include "nav.html";
 $date=date_parse(date("Y-m-d"));
 $sql = "select e.evNo,i.kNo,i.ad,i.soyad ,k.baslangic,k.bitis,e.adres,ev.eTip,e.oSayisi from kira k,ev e,insan i,evtip ev,sahip s where ev.eNo=e.eNo and e.evNo=s.evNo and i.kNo=k.kNo and k.evNo=e.evNo and k.bitis>".tarih_ver($date)."";
 $result = $conn->query($sql);
 
-echo "<h1>kiradakiler</h1>
+echo "<h1>kiradakiler</h1><div style='overflow-x:auto;'>
+
+
 <table style='width:75%'>
   <tr>
     <th>ad</th>
@@ -40,8 +45,6 @@ if ($result->num_rows > 0) {
 } else {
     echo "0 results";
 }
-echo "</table>";
+echo "</table></div>";
 $conn->close();
 ?>
-ev eklemek için -><a href="evEkle.php">ev ekle</a><br>
-kiracý eklemek için -><a href="kiraEkle.php">kira ekle</a>

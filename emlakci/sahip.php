@@ -1,4 +1,8 @@
+<head>
+<link rel="stylesheet" type="text/css" href="sitil.css">
+</head>
 <?php
+include "nav.html";
 include "bag.php";
 	if(isset($_POST['eNo']) && isset($_POST['kisi']) ) {
 	$sql = "INSERT INTO sahip(kNo,evNo) VALUES (".$_POST["kisi"].",".$_POST['eNo'].");";

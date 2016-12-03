@@ -1,6 +1,10 @@
-﻿<?php
+﻿<head>
+<link rel="stylesheet" type="text/css" href="sitil.css">
+</head><?php
 include "bag.php";
 include "function.php";
+
+include "nav.html";
 	if(isset($_POST['baslangic']) && isset($_POST['bitis']) && isset($_POST['ev'])) {
 		$date=date_parse(date("Y-m-d"));
 		$bas=date_parse($_POST['baslangic']);

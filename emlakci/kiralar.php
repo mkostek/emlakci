@@ -1,4 +1,9 @@
+<head>
+<link rel="stylesheet" type="text/css" href="sitil.css">
+</head>
+
 <?php
+include "nav.html";
 include "bag.php";
 include "function.php";
 $id=$_GET["id"];

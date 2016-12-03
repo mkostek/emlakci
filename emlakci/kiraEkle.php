@@ -1,11 +1,16 @@
-﻿<?php
+﻿<head>
+
+</head><?php
 include "bag.php";
+
+include "nav.html";
 ?>
 <html>
 
 	<head>
 	  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/resources/demos/style.css">
+  <link rel="stylesheet" type="text/css" href="sitil.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 		<script>
@@ -15,17 +20,21 @@ include "bag.php";
 			} );
 			function showHint()
 			{
+				
 			var str=document.getElementById("ev").value;
 			if(str=="")
 			{
 			document.getElementById("calis").innerHTML="";return;
 			}else
 			{
+				
 			if(window.XMLHttpRequest)
 			{
+				
 			xmlhttp=new XMLHttpRequest();
 			}
 			else{
+				
 			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
 			}
 			xmlhttp.onreadystatechange=function()
@@ -33,9 +42,11 @@ include "bag.php";
 			if(xmlhttp.readyState==4&&xmlhttp.status==200)
 			{
 			document.getElementById("calis").innerHTML=xmlhttp.responseText;
+			$(".hadi").css({"background-color": "yellow"});
 			}
 			};
 			xmlhttp.open("GET","getHint.php?q="+str,true);xmlhttp.send();
+			
 			}
 			}
 		</script>
@@ -48,15 +59,15 @@ if(isset($_GET['ücret'])&&isset($_GET['oSayisi'])&& isset($_GET['ücret'])&& is
 else
 	$sql = "select *from ev where and evNo not in( select evNo FROM kira where bitis>'".date("Y-m-d")."')";
 $result = $conn->query($sql);
-?><br>kişiyi seçiniz:<select name="ev" id="ev"  onchange="showHint()">
+?><br>kişiyi seçiniz:<select name="ev" id="ev" class="hadi"  onchange="showHint()">
 <?php
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {  
-		echo	"<option value=".$row["evNo"].">odaSayisi:".$row["oSayisi"].",ücret:".$row["ucret"]."</option>";
+		echo	"<option class='hadi' value=".$row["evNo"].">odaSayisi:".$row["oSayisi"].",ücret:".$row["ucret"]."</option>";
     }
 } 
-echo "<option value=1000 selected>odaSayisi: ücret: </option></select><br>"; 
+echo "<option class='hadi' value=1000 selected>odaSayisi: ücret: </option></select><br>"; 
 echo "<br>kiacıyı ekleyiniz....";
 $sql = "SELECT * FROM  insan";
 $result = $conn->query($sql);

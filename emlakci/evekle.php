@@ -1,6 +1,10 @@
-﻿<form action="insanekle.php">
+﻿<head>
+<link rel="stylesheet" type="text/css" href="sitil.css">
+</head>
+
+<form action="insanekle.php">
 <?php
-include "bag.php";
+include "bag.php";include "nav.html";
 $sql = "SELECT * FROM  evtip";
 $result = $conn->query($sql);
 echo 'ev Tipini seçiniz:<select name="tip">';

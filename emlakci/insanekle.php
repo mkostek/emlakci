@@ -1,5 +1,8 @@
-﻿<?php
+﻿<head>
+<link rel="stylesheet" type="text/css" href="sitil.css">
+</head><?php
 
+include "nav.html";
 include "bag.php";
 session_start();
 

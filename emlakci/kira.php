@@ -1,5 +1,9 @@
+<head>
+<link rel="stylesheet" type="text/css" href="sitil.css">
+</head>
+
 <?php
-include "bag.php";
+include "bag.php";include "nav.html";
 if(isset($_POST['baslangic']&&isset($_POST['bitis'])){
 	$sql = "select *from ev where evNo not in( select evNo FROM kira where bitis>'".date("D.M.Y")."')";
 $result = $conn->query($sql);
