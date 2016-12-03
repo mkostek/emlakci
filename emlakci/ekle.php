@@ -10,7 +10,6 @@ include "bag.php";include "nav.html";
     echo "Yeni kişi başarı ile eklendi<br>";
 } else {
     echo "hata: " . $sql . "<br>" . $conn->error;
-}echo '<br>geri dönmek için burayı kullanın<a href="insanekle.php">ev ekranı</a><br>';
-echo '<br>kira eklemek için <a href="kiraEkle.php">ev ekranı</a><br>';
+}
 }
 ?>

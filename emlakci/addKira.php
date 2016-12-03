@@ -18,9 +18,6 @@ include "nav.html";
 }
 }else echo "tarihte bir yanlışlık var vesselam";
 }
-
-echo '<br>geri dönmek için <a href="insanekle.php">ev ekranı</a>';
-echo '<br>anasayfaya dönmek için <a href="index.php">ana sayfa</a>';		
 		
 	/*$sql = "INSERT INTO insan(ad,soyad,telNo) VALUES ('".$_POST["ad"]."','".$_POST['soyad']."','".$_POST['tel']."');";
 	if ($conn->query($sql) === TRUE) {

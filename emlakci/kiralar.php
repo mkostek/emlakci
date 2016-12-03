@@ -14,7 +14,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "ad: " . $row["ad"]. " - soyad: " . $row["soyad"]. "  telefon:" . $row["telNo"]. "-ucret:". $row["ucret"]." adres:".$row["adres"]. " - odasayisi:" . $row["oSayisi"]."<br>";
+        echo "<p>ad: " . $row["ad"]. " - soyad: " . $row["soyad"]. "  telefon:" . $row["telNo"]. "-ucret:". $row["ucret"]." adres:".$row["adres"]. " - odasayisi:" . $row["oSayisi"]."</p><br>";
     }
 } else {
     echo "0 results";

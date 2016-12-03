@@ -1,11 +1,13 @@
-<head>
+ï»¿<head>
 <link rel="stylesheet" type="text/css" href="sitil.css">
 </head><?php 
 include "bag.php"; 
 include "function.php";
 include "nav.html";
 $date=date_parse(date("Y-m-d"));
-$sql = "select e.evNo,i.kNo,i.ad,i.soyad ,k.baslangic,k.bitis,e.adres,ev.eTip,e.oSayisi from kira k,ev e,insan i,evtip ev,sahip s where ev.eNo=e.eNo and e.evNo=s.evNo and i.kNo=k.kNo and k.evNo=e.evNo and k.bitis>".tarih_ver($date)."";
+$sql = "select distinct(e.evNo),i.kNo,i.ad,i.soyad ,k.baslangic,k.bitis,e.adres,ev.eTip,e.oSayisi 
+from kira k,ev e,insan i,evtip ev,sahip s
+ where ev.eNo=e.eNo and e.evNo=s.evNo and i.kNo=k.kNo and k.evNo=e.evNo and k.bitis>".tarih_ver($date)." order by k.bitis asc";
 $result = $conn->query($sql);
 
 echo "<h1>kiradakiler</h1><div style='overflow-x:auto;'>
@@ -20,7 +22,7 @@ echo "<h1>kiradakiler</h1><div style='overflow-x:auto;'>
     <th>adres</th> 
     <th>evTip</th>
 	    <th>oda sayisi</th>
-    <th>ayrıntılı </th> 
+    <th>ayrÄ±ntÄ±lar </th> 
   </tr>";
   
   

@@ -11,7 +11,6 @@ include "bag.php";
 } else {
     echo "hata: " . $sql . "<br>" . $conn->error;
 }
-echo '<br>geri dönmek için <a href="insanekle.php">ev ekranı</a>';
 }
 
 //SELECT e.adres ,e.oSayisi,i.ad,i.soyad,i.telNo,e.ucret FROM ev e,sahip s,evtip ev,insan i where e.evNo=s.evNo and s.kNO=i.kNo and ev.eNo=e.eNo and e.evNo
