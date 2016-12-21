@@ -1,5 +1,5 @@
 body {
-    background-color: lightblue;
+    background-color: #bedae3;
 }
 
 h1 {
@@ -16,7 +16,7 @@ p {
     padding-left: 80px;
 }
 
-div {
+table {
   width: %100px;
    border: 1px solid green;
    padding: 25px;
@@ -55,10 +55,17 @@ input[type=button], input[type=submit], input[type=reset] {
     margin: 4px 2px;
     cursor: pointer;
 }
-div {
+tr {
     border-radius: 5px;
-    background-color: #f2f2f2;
     padding: 20px;
+}
+tr#bir
+{
+    background-color:#71847c;
+}
+tr#iki
+{
+    background-color:#725f76;
 }
 select {
     width: 50%;
