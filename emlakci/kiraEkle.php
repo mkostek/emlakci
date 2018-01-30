@@ -7,7 +7,6 @@ include "nav.html";
 
 	<head>
 	  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
   <link rel="stylesheet" type="text/css" href="sitil.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -79,7 +78,7 @@ if ($result->num_rows > 0) {
 baslangic tarihi:<input type="text" name="baslangic" class="datepicker" /><br>
 bitis tarih:<input type="text" name="bitis" class="datepicker" /><br><?php 	
 if(isset($_GET['ücret'])&&isset($_GET['oSayisi'])&& isset($_GET['ücret'])&& isset($_GET['tip']) && isset($_GET['adres']))
-	$sql="select *from ev where eNo=".$_GET['tip']." and ucret<".$_GET['ücret']." and oSayisi<".$_GET['oSayisi']." and adres like '%".$_GET['adres']."%' and  evNo not in( select evNo FROM kira where bitis>NOW() )";
+	$sql="select *from ev where eNo=".$_GET['tip']." and ucret<".$_GET['ücret']." and oSayisi<=".$_GET['oSayisi']." and adres like '%".$_GET['adres']."%' and  evNo not in( select evNo FROM kira where bitis>NOW() )";
 else
 	$sql = "select *from ev where and evNo not in( select evNo FROM kira where bitis>NOW())";
 $result = $conn->query($sql);
