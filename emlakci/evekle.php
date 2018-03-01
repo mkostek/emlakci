@@ -1,7 +1,8 @@
 ﻿<head>
+
 <link rel="stylesheet" type="text/css" href="sitil.css">
 </head>
-
+<div>
 <form action="insanekle.php">
 <?php
 include "bag.php";include "nav.html";
@@ -20,6 +21,6 @@ adresi giriniz:<input type="text" name="adres"><br>
 ücretini giriniz:<input type="text" name="ücret"><br>
 oda sayısını giriniz:<input type="text" name="oda"><br>
 <input type="submit" value="gonder">
-</form>
+</form></div>
 
 

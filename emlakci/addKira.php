@@ -1,5 +1,23 @@
 ﻿<head>
 <link rel="stylesheet" type="text/css" href="sitil.css">
+<script>
+function gonder(){
+window.setTimeout(function(){
+
+        // Move to a new location or you can do something else
+        window.location.href = "index.php";
+
+    }, 1000);
+}
+function gonderd(){
+window.setTimeout(function(){
+
+        // Move to a new location or you can do something else
+        window.location.href = "kiraekle.php";
+
+    }, 1000);
+}
+</script>
 </head><?php
 include "bag.php";
 include "function.php";
@@ -12,11 +30,11 @@ include "nav.html";
 	if(karsila($bas,$date)&&karsila($bitis,$date)&&karsila($bitis,$bas)){
 	$sql = "INSERT INTO kira(baslangic, bitis, evNo, kNo) VALUES ('".tarih_ver($bas)."','".tarih_ver($bitis)."',".$_POST['ev'].",".$_POST['kisi'].")";
 	if ($conn->query($sql) === TRUE) {
-    echo "kiracı ev ile başarı ile eklendi<br>";
+      ?> <body onload="gonder()">kiracı ev ile başarı ile eklendi</body><?php
 } else {
     echo "hata: " . $sql . "<br>" . $conn->error;
 }
-}else echo "tarihte bir yanlışlık var vesselam";
+}else echo '<body onload="gonderd()">tarihte bir yanlışlık var vesselam</body>';
 }
 		
 	/*$sql = "INSERT INTO insan(ad,soyad,telNo) VALUES ('".$_POST["ad"]."','".$_POST['soyad']."','".$_POST['tel']."');";

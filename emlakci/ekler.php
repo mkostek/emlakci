@@ -4,7 +4,8 @@
 window.setTimeout(function(){
 
         // Move to a new location or you can do something else
-        window.location.href = "kiraekle.php";
+		window.alert("1 sn içinde kişi ilişkilendirme sayfasına yönlendirileceksiniz... ");
+        window.location.href = "insanekle.php";
 
     }, 1000);
 </script>

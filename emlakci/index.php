@@ -4,7 +4,7 @@
 include "bag.php"; 
 include "function.php";
 include "nav.html";
-$sql = "select distinct(e.evNo),i.kNo,i.ad,i.soyad ,k.baslangic,k.bitis,e.adres,ev.eTip,e.oSayisi 
+$sql = "select distinct(e.evNo),i.kNo,i.ad,i.soyad ,k.baslangic,k.bitis,e.adres,ev.eTip,e.oSayisi,k.kiNo 
 from kira k,ev e,insan i,evtip ev,sahip s
  where ev.eNo=e.eNo and e.evNo=s.evNo and i.kNo=k.kNo and k.evNo=e.evNo and k.bitis>NOW() order by k.bitis asc";
 $result = $conn->query($sql);
@@ -41,6 +41,7 @@ if ($result->num_rows > 0) {
     <td>".$row["eTip"]." </td>
 	    <td>". $row["oSayisi"]."</td>
     <td><a href=kiralar.php?id=".$row["evNo"].">sahibi</a></td>
+	<td><a href=cikart.php?id=".$row["kiNo"].">bitir</a></td>
   </tr>";
     }
 } else {
