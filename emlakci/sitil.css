@@ -1,5 +1,5 @@
 body {
-    background-color: #bedae3;
+    background-color: #c0e8f5;
 }
 
 h1 {
@@ -18,10 +18,18 @@ p {
 
 table {
   width: %100px;
-   border: 1px solid green;
+   border: 1px solid #061e06;
    padding: 25px;
     margin: 25px;
 --}
+
+tr#bir{
+    background-color:bisque;
+}
+tr#iki{
+    background-color:#82c693;
+}
+
 input[type=text], select {
     width: 50%;
     padding: 12px 20px;
@@ -47,7 +55,7 @@ input[type=submit]:hover {
     background-color: #45a049;
 }
 input[type=button], input[type=submit], input[type=reset] {
-    background-color: #4CAF50;
+    background-color: 	#ff6633;
     border: none;
     color: white;
     padding: 16px 32px;
@@ -55,24 +63,17 @@ input[type=button], input[type=submit], input[type=reset] {
     margin: 4px 2px;
     cursor: pointer;
 }
-tr {
+div {
     border-radius: 5px;
+    background-color: #f2f2f2;
     padding: 20px;
-}
-tr#bir
-{
-    background-color:#71847c;
-}
-tr#iki
-{
-    background-color:#725f76;
 }
 select {
     width: 50%;
     padding: 16px 20px;
     border: none;
     border-radius: 3px;
-    background-color: #f1f1f1;
+    background-color: #d2ff4d;
 }
 ul {
     list-style-type: none;

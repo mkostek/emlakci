@@ -22,12 +22,12 @@ if ($conn->query($sql) === TRUE) {
 
     echo "</select>";
 echo "<br>Eğer yeni bir kişi eklemek istiyorsanız aşağıdaki form ile ekleyiniz...";?>
-<br><form action="ekle.php" method="post">
+<br><form action="ekler.php" method="post">
 ad:<input type="text" name="ad" /><br>
 soyad:<input type="text" name="soyad" /><br>
 telefon:<input type="text" name="tel" /><br>
 
-<input type="submit" value="kişi ekle"/>
+<input type="submit" value="kişi ekle" />
 
 </form>
 <form action="sahip.php" method="post">
